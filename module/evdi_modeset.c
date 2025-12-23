@@ -505,7 +505,7 @@ static int evdi_crtc_init(struct drm_device *dev)
 static const struct drm_mode_config_funcs evdi_mode_funcs = {
     .fb_create = evdi_fb_user_fb_create,
 #if LINUX_VERSION_CODE < KERNEL_VERSION(6, 11, 0) && !defined(EL9)
-    .output_poll_changed = NULL,
+   // .output_poll_changed = NULL,
 #endif
     .atomic_commit = drm_atomic_helper_commit,
     .atomic_check = drm_atomic_helper_check
